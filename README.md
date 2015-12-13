@@ -9,8 +9,8 @@ script to turn on or off proxy for debian based systems such as ubuntu, raspberr
 #### ./proxy_manager.py cmd [proxy_address port] [no_proxy_address]
 where:
 
-* **cmd** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:'on' or 'off',  turn on or off proxy
-* **proxy_address**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: addess of the proxy, not include 'http://' and similar
+* **cmd** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:`on` or `off`,  turn on or off proxy
+* **proxy_address**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: addess of the proxy, not include `http://` and similar
 * **port**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: port of the proxy
 * **no_proxy_address**&nbsp;: address to be exclude from proxy
 
