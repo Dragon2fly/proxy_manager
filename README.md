@@ -3,7 +3,7 @@ script to turn on or off proxy for debian based systems such as ubuntu, raspberr
 
 ### Install:
     git clone https://github.com/Dragon2fly/proxy_manager.git
-    cp proxy_manager/proxy_manager.py .
+    cp proxy_manager/proxy_manager.py . && rm -r -f proxy_manager/
   
   or download https://github.com/Dragon2fly/proxy_manager/archive/master.zip
   and extract `proxy_manager.py` into your `$HOME` directory
