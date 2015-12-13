@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'duc_tin'
 
-import sys
+import os, sys
 from subprocess import call
 
 addr0, port0 = '', ''
@@ -16,6 +16,8 @@ def proxy_on(address, port, no_proxy=''):
     # apt-get and update-manager
     contents = ['Acquire::{0}::Proxy "{0}://{1}";\n'.format(kind, proxy) for kind in ('http', 'https', 'socks', 'ftp')]
     line = ''.join(contents)[:-1]
+    if not os.path.exists('/etc/apt/apt.conf'):
+        call('sudo touch /etc/apt/apt.conf'.split())
     with open('/tmp/temp', 'w+') as tmp:
         with open('/etc/apt/apt.conf', 'r') as apt:
             cache = [l for l in apt.readlines() if 'proxy' not in l]
@@ -46,6 +48,8 @@ def proxy_on(address, port, no_proxy=''):
 
 def proxy_off():
     # apt-get and update-manager
+    if not os.path.exists('/etc/apt/apt.conf'):
+        call('sudo touch /etc/apt/apt.conf'.split())
     with open('/tmp/temp', 'w+') as tmp:
         with open('/etc/apt/apt.conf', 'r') as apt:
             cache = [l for l in apt.readlines() if 'proxy' not in l]
@@ -102,11 +106,12 @@ Set default proxy:
         cmd = args[0]
         if cmd == 'on':
             addr, port = args[1:2], args[2:3]
-            if not all([addr, port]) and all([addr0, port0]):
-                addr, port = addr0, port0
-            if not all([addr, port, addr0, port0]):
-                print('Error: Please specify proxy address and port')
-                sys.exit(1)
+            if not all([addr, port]):
+                if all([addr0, port0]):
+                    addr, port = addr0, port0
+                else:
+                    print('Error: Please specify proxy address and port')
+                    sys.exit(1)
 
             exclude = ','.join(args[3:])+exclude0
             proxy_on(addr, port, exclude)
