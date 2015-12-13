@@ -43,6 +43,7 @@ def proxy_on(address, port, no_proxy=''):
     call("gsettings set org.gnome.system.proxy.https port {}".format(port).split())
     call(["gsettings", "set", "org.gnome.system.proxy", "ignore-hosts", '{}'.format(str(no_proxy.split(',')))])
 
+
 def proxy_off():
     # apt-get and update-manager
     with open('/tmp/temp', 'w+') as tmp:
