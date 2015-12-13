@@ -105,7 +105,7 @@ Set default proxy:
     else:
         cmd = args[0]
         if cmd == 'on':
-            addr, port = args[1:2], args[2:3]
+            addr, port = args[1:2][0], args[2:3][0]
             if not all([addr, port]):
                 if all([addr0, port0]):
                     addr, port = addr0, port0
