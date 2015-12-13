@@ -18,26 +18,26 @@ where:
   You have a proxy **http://myproxy.com:8080**
 
    * Set system wide proxy:
-
+    ```
     $ ./proxy_manager.py on myproxy.com 8080
-
+    ```
    * You don't want to use this proxy on .mydomain.com, www.abc.com:
-
+    ```
     $ ./proxy_manager.py on myproxy.com 8080 .mydomain.com www.abc.com
-
+    ```
    * You don't need proxy anymore:
-
+    ```
     $ ./proxy_manager.py off
-
+    ```
 ### Set default proxy:
   * Open `proxy_manager.py` for editing.
-
+    ```
     $ gedit proxy_manager.py
-
+    ```
   * Then replace these below lines
     ```
-      addr0, port0 = '', ''
-      exclude0 = ''
+    addr0, port0 = '', ''
+    exclude0 = ''
     ```
 
   * into:
