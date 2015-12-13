@@ -2,16 +2,20 @@
 script to turn on or off proxy for debian based systems such as ubuntu, raspberry,...
 
 ### Install:
-  Save `proxy_manager.py` into your `$HOME` directory
+    git clone https://github.com/Dragon2fly/proxy_manager.git
+    cp proxy_manager/proxy_manager.py .
+  
+  or download https://github.com/Dragon2fly/proxy_manager/archive/master.zip
+  and extract `proxy_manager.py` into your `$HOME` directory
 
 ### Usage:
 
 #### ./proxy_manager.py cmd [proxy_address port] [no_proxy_address]
 where:
 
-* **cmd** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:`on` or `off`,  turn on or off proxy
-* **proxy_address**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: addess of the proxy, not include `http://` and similar
-* **port**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: port of the proxy
+* **cmd** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:`on` or `off`,  turn on or off proxy
+* **proxy_address**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: addess of the proxy, not include `http://` and similar
+* **port**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: port of the proxy
 * **no_proxy_address**&nbsp;: address to be exclude from proxy
 
 ### Example:
