@@ -16,7 +16,7 @@ where:
 * **cmd** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:`on` or `off`,  turn on or off proxy
 * **proxy_address**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: addess of the proxy, not include `http://` and similar
 * **port**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: port of the proxy
-* **no_proxy_address**&nbsp;: address to be exclude from proxy
+* **no_proxy_address**&nbsp;: address to be excluded from proxy
 
 ### Example:
   You have a proxy **http://myproxy.com:8080**

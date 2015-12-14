@@ -73,7 +73,7 @@ if __name__ == '__main__':
     cmd                'on' or 'off',  turn on or off proxy
     proxy_address       addess of the proxy, not include 'http://' and similar
     port                port of the proxy
-    no_proxy_address    address to be exclude from proxy
+    no_proxy_address    address to be excluded from proxy
 
 Example:
     You have a proxy 'http://myproxy.com:8080'
