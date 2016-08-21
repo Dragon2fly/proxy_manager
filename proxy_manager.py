@@ -52,8 +52,10 @@ def proxy_off():
         call('sudo touch /etc/apt/apt.conf'.split())
     with open('/tmp/temp', 'w+') as tmp:
         with open('/etc/apt/apt.conf', 'r') as apt:
-            cache = [l for l in apt.readlines() if 'proxy' not in l]
+            cache = [l for l in apt.readlines() if 'proxy' not in l.lower()]
         tmp.writelines(cache)
+
+    print 'Clear apt.conf'
     call('sudo mv {} /etc/apt/apt.conf'.format(tmp.name).split())
 
     # other programs
@@ -61,9 +63,12 @@ def proxy_off():
         with open('/etc/environment', 'r') as env:
             cache = [l for l in env.readlines() if 'proxy' not in l.lower()]
         tmp.writelines(cache)
+
+    print 'Clear environment'
     call('sudo mv {} /etc/environment'.format(tmp.name).split())
 
     # GTK3 applications
+    print 'Clear gtk system.proxy'
     call("gsettings set org.gnome.system.proxy mode 'none'".split())
 
 
